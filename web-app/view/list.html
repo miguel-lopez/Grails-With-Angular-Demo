@@ -1,0 +1,25 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a class="home" href="/">Home</a></li>
+        <li><a href="#AddNewProduct" class="create">New Product</a></li>
+    </ul>
+</div>
+
+<div style="margin: 10px" ng-controller='ListCtrl'>
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Serial Number</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+        <tr ng-repeat="product in products.product | filter: {id: '!0'}">
+            <td><a href="#/show/{{product.id}}">{{product.name}}</a></td>
+            <td>{{product.category}}</td>
+            <td>{{product.serialNumber}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.description}}</td>
+        </tr>
+    </table>
+</div>

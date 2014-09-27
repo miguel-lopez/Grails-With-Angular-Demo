@@ -1,0 +1,55 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a class="home" href="/">Home</a></li>
+        <li><a href="#" class="list">Product List</a></li>
+    </ul>
+</div>
+
+<div style="margin: 10px" ng-controller='SaveCtrl'>
+    <div id="create-product" class="content scaffold-create" role="main">
+
+        <span ng-show="actionName == 'create'" class="age">
+            <h1>Create Product</h1>
+        </span>
+        <span ng-show="actionName == 'update'" class="age">
+            <input type="hidden" value="{{product.id}}">
+            <h1>Update Product</h1>
+        </span>
+
+        <fieldset class="form">
+            <div class="fieldcontain  required">
+                <label for="name">Name <span class="required-indicator">*</span></label>
+                <input type="text" name="name" value="" id="name" ng-model="product.name"/>
+            </div>
+
+            <div class="fieldcontain">
+                <label for="category">Category</label>
+                <input type="text" name="category" value="" id="category" ng-model="product.category"/>
+            </div>
+
+            <div class="fieldcontain  required">
+                <label for="serialNumber">
+                    Serial Number
+                    <span class="required-indicator">*</span>
+                </label>
+                <input type="text" name="serialNumber" value="" id="serialNumber"
+                       ng-model="product.serialNumber"/>
+            </div>
+
+            <div class="fieldcontain  required">
+                <label for="price">Price <span class="required-indicator">*</span></label>
+                <input type="number" min="0" name="price" value="" id="price" ng-model="product.price"/>
+            </div>
+
+            <div class="fieldcontain  ">
+                <label for="description">Description</label>
+                <textarea rows="5" cols="50" name="description" value="" id="description"
+                          ng-model="product.description"></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset class="buttons">
+            <input type="submit" class="save" value="Save" id="create" ng-click="saveProduct()"/>
+        </fieldset>
+    </div>
+</div>

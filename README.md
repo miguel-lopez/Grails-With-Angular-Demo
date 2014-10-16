@@ -3,4 +3,4 @@ Grails With Angular Demo
 
 Angular Demo
 
-Take a look at running version of this code by clicking (here)[http://grailsoauthplugindemo.herokuapp.com/]
+Take a look at running version of this code by clicking [here](http://grailsoauthplugindemo.herokuapp.com/)
